@@ -61,6 +61,7 @@ video {
   --accent-medium: #ffe4e6;
   --accent-lightest: #fff1f2;
   --base-color: #be123c;
+  --accent-darkest:#881337;
 }
 body {
   display: grid;
@@ -74,32 +75,44 @@ body {
 header {
   grid-area: header;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  row-gap: 20px;
+  grid-template-columns: 2fr 1fr;
   grid-template-areas:
     "search account"
     "greeting admin-controls";
   background-color: var(--accent-lightest);
+  padding: 12px;
+  box-shadow: 10px 10px 10px black;
 }
 header > * {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .search {
   grid-area: search;
   display: flex;
+  gap: 12px;
+  justify-items: space-around;
   align-items: center;
 }
 #search-bar {
   margin-right: 10px;
+  border-radius: 10px;
   flex: 1;
 }
 .account {
   grid-area: account;
   display: flex;
-  justify-content: space-around;
+  gap: 4px;
+  justify-content: center;
   align-items: center;
 }
 .account img {
   height: 30px;
+}
+.admin-name{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
 }
 .greeting {
   grid-area: greeting;
@@ -111,6 +124,19 @@ header > * {
 }
 .admin-controls {
   grid-area: admin-controls;
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+.admin-controls button{
+    font-size: 1.2rem;
+    color: white;
+background-color: var(--accent-darkest);
+border-style: none;
+padding: 8px;
+border-radius: 500px;
+width: 80px;
 }
 
 nav {
