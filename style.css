@@ -79,19 +79,31 @@ header {
     "greeting admin-controls";
     background-color: var(--accent-light);
 }
+header>*{
+    border: 1px solid red
+}
 .search {
   grid-area: search;
   display: flex;
   align-items: center;
 }
+#search-bar{
+    margin-right: 10px;
+    flex: 1;
+}
 .account {
   grid-area: account;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .account img{
     height: 30px;
 }
 .greeting {
   grid-area: greeting;
+  display: flex;
+  align-items: center;
 }
 .greeting>img{
     height: 60px;
