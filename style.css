@@ -61,7 +61,7 @@ video {
   --accent-medium: #ffe4e6;
   --accent-lightest: #fff1f2;
   --base-color: #be123c;
-  --accent-darkest:#881337;
+  --accent-darkest: #881337;
 }
 body {
   display: grid;
@@ -75,7 +75,7 @@ body {
 header {
   grid-area: header;
   display: grid;
-  row-gap: 20px;
+  row-gap: 10px;
   grid-template-columns: 2fr 1fr;
   grid-template-areas:
     "search account"
@@ -90,7 +90,7 @@ header > * {
 .search {
   grid-area: search;
   display: flex;
-  gap: 12px;
+  column-gap: 12px;
   justify-items: space-around;
   align-items: center;
 }
@@ -102,21 +102,22 @@ header > * {
 .account {
   grid-area: account;
   display: flex;
-  gap: 4px;
+  column-gap: 6px;
   justify-content: center;
   align-items: center;
 }
 .account img {
   height: 30px;
 }
-.admin-name{
-    text-decoration: none;
-    color: black;
-    font-size: 1.5rem;
+.admin-name {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
 }
 .greeting {
   grid-area: greeting;
   display: flex;
+  column-gap: 10px;
   align-items: center;
 }
 .greeting > img {
@@ -125,18 +126,18 @@ header > * {
 .admin-controls {
   grid-area: admin-controls;
   display: flex;
-  gap: 10px;
+  column-gap: 10px;
   justify-content: space-around;
   align-items: center;
 }
-.admin-controls button{
-    font-size: 1.2rem;
-    color: white;
-background-color: var(--accent-darkest);
-border-style: none;
-padding: 8px;
-border-radius: 500px;
-width: 80px;
+.admin-controls button {
+  font-size: 1.2rem;
+  color: white;
+  background-color: var(--accent-darkest);
+  border-style: none;
+  padding: 8px;
+  border-radius: 500px;
+  width: 80px;
 }
 
 nav {
