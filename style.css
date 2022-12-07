@@ -57,39 +57,40 @@ video {
 }
 
 /* #endregion */
-:root{
-    --accent-light: #fecdd3;
-    --base-color: #f43f5e;
+:root {
+  --accent-medium: #ffe4e6;
+  --accent-lightest: #fff1f2;
+  --base-color: #be123c;
 }
-body{
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 5fr 0.5fr;
-    grid-template-areas: 
-    'nav header'
-    'nav main'
-    'footer footer';
+body {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 5fr 0.5fr;
+  grid-template-areas:
+    "nav header"
+    "nav main"
+    "footer footer";
 }
 header {
-    grid-area: header;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas:
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
     "search account"
     "greeting admin-controls";
-    background-color: var(--accent-light);
+  background-color: var(--accent-lightest);
 }
-header>*{
-    border: 1px solid red
+header > * {
+  border: 1px solid red;
 }
 .search {
   grid-area: search;
   display: flex;
   align-items: center;
 }
-#search-bar{
-    margin-right: 10px;
-    flex: 1;
+#search-bar {
+  margin-right: 10px;
+  flex: 1;
 }
 .account {
   grid-area: account;
@@ -97,21 +98,30 @@ header>*{
   justify-content: space-around;
   align-items: center;
 }
-.account img{
-    height: 30px;
+.account img {
+  height: 30px;
 }
 .greeting {
   grid-area: greeting;
   display: flex;
   align-items: center;
 }
-.greeting>img{
-    height: 60px;
+.greeting > img {
+  height: 60px;
 }
 .admin-controls {
   grid-area: admin-controls;
 }
 
-nav{grid-area: nav;}
-main{ grid-area: main;}
-footer{grid-area: footer;}
+nav {
+  grid-area: nav;
+  background-color: var(--base-color);
+}
+main {
+  grid-area: main;
+  background-color: var(--accent-medium);
+}
+footer {
+  grid-area: footer;
+  background-color: var(--accent-lightest);
+}
